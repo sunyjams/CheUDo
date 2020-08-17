@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="account"
+            type="com.xiaou.cheudo.model.Account" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="44dp"
+            android:layout_marginRight="44dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintVertical_chainStyle="spread">
+
+            <ImageView
+                android:contentDescription="@string/app_name"
+                android:src="@mipmap/ic_launcher"
+                android:layout_width="95dp"
+                android:layout_height="53dp" />
+
+            <TextView
+                android:text="@string/sign_slogan"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:layout_marginTop="11dp"
+                android:textColor="@color/txtBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="@string/sign_org"
+                android:textColor="@color/colorQuoteBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.xiaou.cheudo.widget.editview.EditTextView
+                android:id="@+id/accountEditView"
+                android:layout_width="match_parent"
+                app:edit_hint_text="@string/sign_mobile"
+                app:edit_space="14dp"
+                app:edit_view_icon="@mipmap/ic_mobile"
+                android:layout_marginTop="65dp"
+                android:layout_height="wrap_content" />
+
+            <com.xiaou.cheudo.widget.editview.EditTextView
+                android:id="@+id/passwordEditView"
+                app:edit_view_icon="@mipmap/ic_password"
+                app:edit_hint_text="@string/sign_password"
+                app:edit_space="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/signIn"
+                android:text="@string/sign_btn_sign"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:layout_width="match_parent"
+                android:layout_height="44dp" />
+            
+        </LinearLayout>
+
+        <ImageView
+            app:layout_constraintBottom_toTopOf="@id/signFoot"
+            android:layout_marginBottom="66dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:src="@mipmap/ic_slogan"
+            android:layout_width="161dp"
+            android:layout_height="62dp" />
+        
+        <TextView
+            android:id="@+id/signFoot"
+            android:text="@string/sign_foot"
+            android:layout_marginBottom="45dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textColor="@color/colorQuoteBlack"
+            android:textSize="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</layout>

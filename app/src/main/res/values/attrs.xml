@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="EditTextView">
+        <attr name="edit_view_icon" format="reference" />
+        <attr name="edit_hint_text" format="string" />
+        <attr name="edit_space" format="dimension" />
+        <attr name="edit_foot" format="string" />
+    </declare-styleable>
+
+</resources>
